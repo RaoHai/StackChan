@@ -251,7 +251,7 @@ void StackChanAvatarDisplay::SetupUI()
 
     ESP_LOGI(TAG, "Creating Stack-chan Avatar...");
 
-    auto avatar = std::make_unique<DefaultAvatar>();
+    auto avatar = std::make_unique<DoggyAvatar>();
     avatar->init(lv_screen_active());
     avatar->getPanel()->onClick().connect([]() {
         if (hal_bridge::is_xiaozhi_ready()) {
