@@ -21,6 +21,12 @@ static const std::string_view OGG_NEW_NOTIFICATION{
     static_cast<const char*>(ogg_new_notification_start),
     static_cast<size_t>(ogg_new_notification_end - ogg_new_notification_start)};
 
+extern const char ogg_asuka_anta_baka_start[] asm("_binary_asuka_anta_baka_ogg_start");
+extern const char ogg_asuka_anta_baka_end[] asm("_binary_asuka_anta_baka_ogg_end");
+static const std::string_view OGG_ASUKA_ANTA_BAKA{
+    static_cast<const char*>(ogg_asuka_anta_baka_start),
+    static_cast<size_t>(ogg_asuka_anta_baka_end - ogg_asuka_anta_baka_start)};
+
 namespace assets {
 
 lv_image_dsc_t get_image(std::string_view name);

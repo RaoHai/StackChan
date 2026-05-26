@@ -251,7 +251,7 @@ void StackChanAvatarDisplay::SetupUI()
 
     ESP_LOGI(TAG, "Creating Stack-chan Avatar...");
 
-    auto avatar = std::make_unique<DoggyAvatar>();
+    auto avatar = std::make_unique<AkusaAvatar>();
     avatar->init(lv_screen_active());
     avatar->getPanel()->onClick().connect([]() {
         if (hal_bridge::is_xiaozhi_ready()) {
@@ -340,7 +340,7 @@ void StackChanAvatarDisplay::SetEmotion(const char* emotion)
         avatar.setEmotion(Emotion::Sad);
     } else if (strcmp(emotion, "sleepy") == 0) {
         avatar.setEmotion(Emotion::Sleepy);
-        avatar.setSpeech("Zzz…");
+        avatar.setSpeech("Zzz");
         is_sleeping_ = true;
         // avatar.mouth().setWeight(10);
 
